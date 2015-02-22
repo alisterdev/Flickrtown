@@ -104,7 +104,7 @@
 	    logs["page"] = document.URL;
 	    logs["events"] = [];
 
-	    ["click", "wheel", "touchstart", "touchend"].map(function(e) {
+	    ["click"].map(function(e) {
 	        document.addEventListener(e, logEvent);
 	    });
 
