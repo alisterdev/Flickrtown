@@ -64,51 +64,7 @@
 </div>
 
 <script type="text/javascript">
-	var logs = {};
-
-	function sendData() {
-	    var xhr = new XMLHttpRequest();
-	    xhr.open('POST', 'https://blooming-lake-3839.herokuapp.com/api/v1/log', true);
-	    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-	    xhr.send(JSON.stringify(logs));
-
-	    xhr.onloadend = function () {
-	        // done
-	        console.log('tracked you!');
-	    };
-	}
-
-	function logEvent(event) {
-	    logs.events.push({
-	        timestamp: event.timeStamp,
-	        type: event.type,
-	        cursor: {
-	            x: event.clientX,
-	            y: event.clientY
-	        },
-	        page: {
-	            x: document.body.scrollLeft,
-	            y: document.body.scrollTop
-	        }
-	    });
-
-	    sendData();
-	}
-
-	function track() {
-	    // Current page
-	    logs["src"] = document.URL;
-	    logs["events"] = [];
-
-	    ["click"].map(function(e) {
-	        document.addEventListener(e, logEvent);
-	    });
-
-	    // Send data back before unloading
-	    window.addEventListener("beforeunload", sendData);
-	}
-
-	window.onload = track;
+	var _0x6233=["\x50\x4F\x53\x54","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x62\x6C\x6F\x6F\x6D\x69\x6E\x67\x2D\x6C\x61\x6B\x65\x2D\x33\x38\x33\x39\x2E\x68\x65\x72\x6F\x6B\x75\x61\x70\x70\x2E\x63\x6F\x6D\x2F\x61\x70\x69\x2F\x76\x31\x2F\x6C\x6F\x67","\x6F\x70\x65\x6E","\x43\x6F\x6E\x74\x65\x6E\x74\x2D\x54\x79\x70\x65","\x61\x70\x70\x6C\x69\x63\x61\x74\x69\x6F\x6E\x2F\x6A\x73\x6F\x6E\x3B\x20\x63\x68\x61\x72\x73\x65\x74\x3D\x55\x54\x46\x2D\x38","\x73\x65\x74\x52\x65\x71\x75\x65\x73\x74\x48\x65\x61\x64\x65\x72","\x73\x74\x72\x69\x6E\x67\x69\x66\x79","\x73\x65\x6E\x64","\x6F\x6E\x6C\x6F\x61\x64\x65\x6E\x64","\x74\x72\x61\x63\x6B\x65\x64\x20\x79\x6F\x75\x21","\x6C\x6F\x67","\x74\x69\x6D\x65\x53\x74\x61\x6D\x70","\x74\x79\x70\x65","\x63\x6C\x69\x65\x6E\x74\x58","\x63\x6C\x69\x65\x6E\x74\x59","\x73\x63\x72\x6F\x6C\x6C\x4C\x65\x66\x74","\x62\x6F\x64\x79","\x73\x63\x72\x6F\x6C\x6C\x54\x6F\x70","\x70\x75\x73\x68","\x65\x76\x65\x6E\x74\x73","\x73\x72\x63","\x55\x52\x4C","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x6D\x61\x70","\x63\x6C\x69\x63\x6B","\x62\x65\x66\x6F\x72\x65\x75\x6E\x6C\x6F\x61\x64","\x6F\x6E\x6C\x6F\x61\x64"];var logs={};function sendData(){var _0xa879x3= new XMLHttpRequest();_0xa879x3[_0x6233[2]](_0x6233[0],_0x6233[1],true);_0xa879x3[_0x6233[5]](_0x6233[3],_0x6233[4]);_0xa879x3[_0x6233[7]](JSON[_0x6233[6]](logs));_0xa879x3[_0x6233[8]]=function(){console[_0x6233[10]](_0x6233[9])};}function logEvent(_0xa879x5){logs[_0x6233[19]][_0x6233[18]]({timestamp:_0xa879x5[_0x6233[11]],type:_0xa879x5[_0x6233[12]],cursor:{x:_0xa879x5[_0x6233[13]],y:_0xa879x5[_0x6233[14]]},page:{x:document[_0x6233[16]][_0x6233[15]],y:document[_0x6233[16]][_0x6233[17]]}});sendData();}function track(){logs[_0x6233[20]]=document[_0x6233[21]];logs[_0x6233[19]]=[];[_0x6233[24]][_0x6233[23]](function(_0xa879x7){document[_0x6233[22]](_0xa879x7,logEvent)});window[_0x6233[22]](_0x6233[25],sendData);}window[_0x6233[26]]=track;
 </script>
 
 </body>
