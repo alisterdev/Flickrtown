@@ -30,12 +30,13 @@ router.get('/', function(req, res) {
       // we can now use "flickr" as our API object,
       // but we can only call public methods and access public data
 
-      flickr.photos.getInfo({
-        photo_id: 15985618334        
+      flickr.photos.search({
+        text: "montreal"
       }, function(err, result) {
-        res.render('index', {data: result});
+        res.render('index', {data: result.photos.photo});          
       });
 
+      
     });
 });
 
