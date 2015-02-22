@@ -33,6 +33,25 @@ router.get('/', function(req, res) {
       flickr.photos.search({
         text: "montreal"
       }, function(err, result) {
+
+        //https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
+        var obj = result.photos.photo;
+        console.log(obj.length);
+        for(var i = 0; i < obj.length; i++) {          
+          var farm = obj[i].farm;
+          var server_id = obj[i].server;
+          var id = obj[i].id;
+          var secret = obj[i].secret;
+          var title = obj[i].title;
+
+          var img-sm = "https://farm" + farm + ".staticflickr.com/" + server_id + "/" + id + "_" + secret + "_n.jpg";
+          var img-lg = "https://farm" + farm + ".staticflickr.com/" + server_id + "/" + id + "_" + secret + "_b.jpg";
+
+          console.log(url);
+     
+
+        }
+
         res.render('index', {data: result.photos.photo});          
       });
 
