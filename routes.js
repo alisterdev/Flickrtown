@@ -16,6 +16,12 @@ router.get('/project/:slug', function(req, res){
 // Index
 router.get('/', function(req, res) {
 
+  var query = "montreal skyline";
+
+  if (req.query.city) {
+    query = req.query.city + " skyline";
+  }
+
   var Flickr = require("flickrapi"),
   flickrOptions = {
     api_key: "ebd88a37617f947edcbe35c153c7179a",
@@ -27,9 +33,10 @@ router.get('/', function(req, res) {
 // but we can only call public methods and access public data
 
 flickr.groups.search({
-  text: "montreal+skyline"
+  text: query
 }, function(err, result) {
-  var groupID = result.groups.group[0].nsid;
+  var randomGroup = Math.floor((Math.random() * result.groups.group.length));
+  var groupID = result.groups.group[randomGroup].nsid;
 
   flickr.groups.pools.getPhotos({
     group_id: groupID

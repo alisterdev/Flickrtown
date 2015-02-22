@@ -25,11 +25,11 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li><a class="menu" href="#">New York</a></li>
-				<li><a class="menu" href="#">London</a></li>
-				<li><a class="menu" href="#">Montreal</a></li>
-				<li><a class="menu" href="#">Toronto</a></li>
-				<li><a class="menu" href="#">Los Angeles</a></li>
+				<li><a class="menu" href="/?city=New+York">New York</a></li>
+				<li><a class="menu" href="/?city=London">London</a></li>
+				<li><a class="menu" href="/">Montreal</a></li>
+				<li><a class="menu" href="/?city=Toronto">Toronto</a></li>
+				<li><a class="menu" href="/?city=Los+Angeles">Los Angeles</a></li>
 			</ul>			
 		</div><!--/.nav-collapse -->
 	</div>
@@ -39,10 +39,19 @@
 <div class="container">
 
 <div class="img-wrapper">
-<% for (var i = 0; i < 20; i++) { %>
+<% 
+	if (data.length > 20) {
+		var numOfPics = 20;
+	} else {
+		var numOfPics = data.length;
+	}
+
+	for (var i = 0; i < numOfPics; i++) { %>
 
 	<a rel="gallery-2" href="<%=data[i].imgLg %>" class="swipebox">
-		<div class="img-holder"  style="background-image: url('<%=data[i].imgSm %>');"></div>
+		<div class="img-holder"  style="background-image: url('<%=data[i].imgSm %>');">
+			<div class="dark-filter"></div>
+		</div>
 		<img src="<%=data[i].imgLg %>" alt="image" style="display: none;">
 	</a>
 	
