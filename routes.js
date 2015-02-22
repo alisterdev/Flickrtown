@@ -16,11 +16,13 @@ router.get('/project/:slug', function(req, res){
 // Index
 router.get('/', function(req, res) {
 
-  var query = "montreal skyline";
+  var query = "montreal";
 
   if (req.query.city) {
-    query = req.query.city + " skyline";
+    query = req.query.city;
   }
+
+  console.log(query);
 
   var Flickr = require("flickrapi"),
   flickrOptions = {
@@ -29,38 +31,40 @@ router.get('/', function(req, res) {
   };
 
   Flickr.tokenOnly(flickrOptions, function(error, flickr) {
-// we can now use "flickr" as our API object,
-// but we can only call public methods and access public data
+    // we can now use "flickr" as our API object,
+    // but we can only call public methods and access public data
+    flickr.groups.search({
+      text: query
+    }, function(err, result) {
+      var randomGroup = Math.floor((Math.random() * result.groups.group.length));
+      var groupID = result.groups.group[randomGroup].nsid;
+      console.log(groupID);
+      flickr.groups.pools.getPhotos({
+        group_id: groupID
+      }, function (err, result){
+        var obj = result.photos.photo;
+        var imgArray = [];
 
-flickr.groups.search({
-  text: query
-}, function(err, result) {
-  var randomGroup = Math.floor((Math.random() * result.groups.group.length));
-  var groupID = result.groups.group[randomGroup].nsid;
+        for (var i = 0; i < obj.length; i++) {          
+          
+          var farm = obj[i].farm;
+          var server_id = obj[i].server;
+          var id = obj[i].id;
+          var secret = obj[i].secret;
 
-  flickr.groups.pools.getPhotos({
-    group_id: groupID
-  }, function (err, result){
-    var obj = result.photos.photo;
-    var imgArray = [];
+          var title = obj[i].title;
+          var imgSm = "https://farm" + farm + ".staticflickr.com/" + server_id + "/" + id + "_" + secret + "_n.jpg";
+          var imgLg = "https://farm" + farm + ".staticflickr.com/" + server_id + "/" + id + "_" + secret + "_b.jpg";
 
-    for(var i = 0; i < obj.length; i++) {          
-      var farm = obj[i].farm;
-      var server_id = obj[i].server;
-      var id = obj[i].id;
-      var secret = obj[i].secret;
+          imgArray[i] = {title: obj[i].title, imgSm: imgSm, imgLg:imgLg};
+        }
 
+        res.render('index', {data: imgArray}); 
 
-      var title = obj[i].title;
-      var imgSm = "https://farm" + farm + ".staticflickr.com/" + server_id + "/" + id + "_" + secret + "_n.jpg";
-      var imgLg = "https://farm" + farm + ".staticflickr.com/" + server_id + "/" + id + "_" + secret + "_b.jpg";
+      }); // end of groups.pools.getPhotos
 
-      imgArray[i] = {title: obj[i].title, imgSm: imgSm, imgLg:imgLg};
-    }
-    res.render('index', {data: imgArray}); 
+    }); // end of group.search
   });
-});
-});
 });
 
 module.exports = router;
