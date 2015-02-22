@@ -4892,3 +4892,17 @@ button.close {
 
 body {
   background: #ccc; }
+
+.navbar-header {
+  display: none; }
+
+.navbar-default {
+  background: rgba(255, 255, 255, 0.7); }
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top; }
+
+.navbar .navbar-collapse {
+  text-align: center; }
