@@ -4897,7 +4897,7 @@ body {
   display: none; }
 
 .navbar-default {
-  background: #222;
+  background: #222222;
   border-color: #111; }
 
 .navbar .navbar-nav {
@@ -4920,9 +4920,8 @@ body {
 
 .img-holder {
   background-size: cover;
-  width: 300px;
+  width: 25%;
   height: 300px;
-  margin: 20px;
   background-position: center;
   background-repeat: no-repeat;
   float: left;
@@ -4940,8 +4939,5 @@ body {
       background: transparent; }
 
 .page-content {
-  margin-top: 100px; }
+  margin-top: 50px; }
 
-.img-wrapper {
-  margin: 0 auto;
-  width: 1020px; }
