@@ -8,8 +8,8 @@
       "_content": "Returns the default hidden preference for the user."
     },
     "response": {
-      "_content": "<rsp stat=\"ok\">\n<person nsid=\"12037949754@N01\" hidden=\"1\" />\n</rsp>"
-    }
+			"_content": "<rsp stat=\"ok\">\n<person nsid=\"12037949754@N01\" hidden=\"1\" />\n</rsp>"
+				}
   },
   "arguments": {
     "argument": [
@@ -23,7 +23,7 @@
   "errors": {
     "error": [
       {
-        "code": 95,
+    "code": 95,
         "message": "SSL is required",
         "_content": "SSL is required to access the Flickr API."
       },
@@ -48,11 +48,12 @@
         "_content": "The method requires user authentication but the user was not logged in, or the authenticated method call did not have the required permissions."
       },
       {
+      {
         "code": 100,
         "message": "Invalid API Key",
         "_content": "The API key passed was not valid or has expired."
       },
-      {
+         {
         "code": 105,
         "message": "Service currently unavailable",
         "_content": "The requested service is temporarily unavailable."
@@ -69,7 +70,7 @@
       },
       {
         "code": 112,
-        "message": "Method \"xxx\" not found",
+                 "message": "Method \"xxx\" not found",
         "_content": "The requested method was not found."
       },
       {
@@ -77,7 +78,7 @@
         "message": "Invalid SOAP envelope",
         "_content": "The SOAP envelope send in the request could not be parsed."
       },
-      {
+					{
         "code": 115,
         "message": "Invalid XML-RPC Method Call",
         "_content": "The XML-RPC request document could not be parsed."
@@ -90,4 +91,4 @@
     ]
   },
   "stat": "ok"
-}
+      }

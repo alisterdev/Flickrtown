@@ -1,10 +1,11 @@
-{
+          {
   "method": {
     "name": "flickr.urls.getUserPhotos",
-    "needslogin": 0,
+    "name": "flickr.urls.getUserPhotos",
+            "needslogin": 0,
     "needssigning": 0,
     "requiredperms": 0,
-    "description": {
+		"description": {
       "_content": "Returns the url to a user's photos."
     },
     "response": {
@@ -26,7 +27,7 @@
     ]
   },
   "errors": {
-    "error": [
+			"error": [
       {
         "code": "1",
         "message": "User not found",
@@ -51,7 +52,7 @@
         "code": 106,
         "message": "Write operation failed",
         "_content": "The requested operation failed due to a temporary issue."
-      },
+              },
       {
         "code": 111,
         "message": "Format \"xxx\" not found",
@@ -66,7 +67,7 @@
         "code": 114,
         "message": "Invalid SOAP envelope",
         "_content": "The SOAP envelope send in the request could not be parsed."
-      },
+	},
       {
         "code": 115,
         "message": "Invalid XML-RPC Method Call",

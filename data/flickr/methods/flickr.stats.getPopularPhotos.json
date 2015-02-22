@@ -8,16 +8,16 @@
       "_content": "List the photos with the most views, comments or favorites"
     },
     "response": {
-      "_content": "<photos page=\"2\" pages=\"89\" perpage=\"10\" total=\"881\">\n\t<photo id=\"2636\" owner=\"47058503995@N01\" \n\t\tsecret=\"a123456\" server=\"2\" title=\"test_04\"\n\t\tispublic=\"1\" isfriend=\"0\" isfamily=\"0\">\n\t\t<stats views=\"941\" comments=\"18\" favorites=\"2\"/>\n\t</photo>\n\t<photo id=\"2635\" owner=\"47058503995@N01\"\n\t\tsecret=\"b123456\" server=\"2\" title=\"test_03\"\n\t\tispublic=\"0\" isfriend=\"1\" isfamily=\"1\">\n\t\t<stats views=\"141\" comments=\"1\" favorites=\"2\"/>\n\t</photo>\n</photos>"
+              "_content": "<photos page=\"2\" pages=\"89\" perpage=\"10\" total=\"881\">\n\t<photo id=\"2636\" owner=\"47058503995@N01\" \n\t\tsecret=\"a123456\" server=\"2\" title=\"test_04\"\n\t\tispublic=\"1\" isfriend=\"0\" isfamily=\"0\">\n\t\t<stats views=\"941\" comments=\"18\" favorites=\"2\"/>\n\t</photo>\n\t<photo id=\"2635\" owner=\"47058503995@N01\"\n\t\tsecret=\"b123456\" server=\"2\" title=\"test_03\"\n\t\tispublic=\"0\" isfriend=\"1\" isfamily=\"1\">\n\t\t<stats views=\"141\" comments=\"1\" favorites=\"2\"/>\n\t</photo>\n</photos>"
     },
     "explanation": {
       "_content": "<p>This method returns the standard photo list xml.</p>\n\n<p>In addition each photo element contains a <code>&lt;stats&gt;</code> element. This has attributes for the view, comment and favorite counts for the requested day.</p>\n\n<p>To map <code>&lt;photo&gt;</code> elements to urls, please read the <a href=\"misc.urls.html\">url documentation</a>.</p>\n"
     }
   },
   "arguments": {
-    "argument": [
-      {
-        "name": "api_key",
+         "argument": [
+            {
+          "name": "api_key",
         "optional": 0,
         "_content": "Your API application key. <a href=\"/services/api/misc.api_keys.html\">See here</a> for more details."
       },
@@ -48,6 +48,7 @@
       {
         "code": "1",
         "message": "User does not have stats",
+        "message": "User does not have stats",
         "_content": "The user you have requested stats has not enabled stats on their account."
       },
       {
@@ -61,9 +62,10 @@
         "_content": "The date provided could not be parsed"
       },
       {
+      {
         "code": "5",
         "message": "Invalid sort",
-        "_content": "The sort provided is not valid"
+         "_content": "The sort provided is not valid"
       },
       {
         "code": 95,
@@ -72,7 +74,7 @@
       },
       {
         "code": 96,
-        "message": "Invalid signature",
+"message": "Invalid signature",
         "_content": "The passed signature was invalid."
       },
       {
@@ -84,14 +86,14 @@
         "code": 98,
         "message": "Login failed / Invalid auth token",
         "_content": "The login details or auth token passed were invalid."
-      },
+			},
       {
         "code": 99,
         "message": "User not logged in / Insufficient permissions",
         "_content": "The method requires user authentication but the user was not logged in, or the authenticated method call did not have the required permissions."
       },
       {
-        "code": 100,
+					"code": 100,
         "message": "Invalid API Key",
         "_content": "The API key passed was not valid or has expired."
       },
@@ -102,10 +104,10 @@
       },
       {
         "code": 106,
-        "message": "Write operation failed",
+                "message": "Write operation failed",
         "_content": "The requested operation failed due to a temporary issue."
       },
-      {
+   {
         "code": 111,
         "message": "Format \"xxx\" not found",
         "_content": "The requested response format was not found."
@@ -121,7 +123,7 @@
         "_content": "The SOAP envelope send in the request could not be parsed."
       },
       {
-        "code": 115,
+				"code": 115,
         "message": "Invalid XML-RPC Method Call",
         "_content": "The XML-RPC request document could not be parsed."
       },
@@ -133,4 +135,4 @@
     ]
   },
   "stat": "ok"
-}
+ }

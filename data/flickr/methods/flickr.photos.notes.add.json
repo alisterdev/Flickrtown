@@ -11,7 +11,7 @@
       "_content": "<note id=\"1234\" />"
     }
   },
-  "arguments": {
+      "arguments": {
     "argument": [
       {
         "name": "api_key",
@@ -21,7 +21,7 @@
       {
         "name": "photo_id",
         "optional": "0",
-        "_content": "The id of the photo to add a note to"
+    "_content": "The id of the photo to add a note to"
       },
       {
         "name": "note_x",
@@ -47,7 +47,7 @@
         "name": "note_text",
         "optional": "0",
         "_content": "The description of the note"
-      }
+			}
     ]
   },
   "errors": {
@@ -57,7 +57,7 @@
         "message": "Photo not found",
         "_content": "The photo id passed was not a valid photo id"
       },
-      {
+                 {
         "code": "2",
         "message": "User cannot add notes",
         "_content": "The calling user does not have permission to add a note to this photo"
@@ -86,7 +86,7 @@
         "code": 97,
         "message": "Missing signature",
         "_content": "The call required signing but no signature was sent."
-      },
+               },
       {
         "code": 98,
         "message": "Login failed / Invalid auth token",
@@ -124,7 +124,7 @@
       },
       {
         "code": 114,
-        "message": "Invalid SOAP envelope",
+					"message": "Invalid SOAP envelope",
         "_content": "The SOAP envelope send in the request could not be parsed."
       },
       {

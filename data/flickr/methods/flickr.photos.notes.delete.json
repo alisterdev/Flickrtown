@@ -33,10 +33,12 @@
         "code": "2",
         "message": "User cannot delete note",
         "_content": "The calling user does not have permission to delete the specified note"
-      },
+	},
+      {
       {
         "code": 95,
         "message": "SSL is required",
+        "_content": "SSL is required to access the Flickr API."
         "_content": "SSL is required to access the Flickr API."
       },
       {
@@ -46,6 +48,7 @@
       },
       {
         "code": 97,
+        "message": "Missing signature",
         "message": "Missing signature",
         "_content": "The call required signing but no signature was sent."
       },
@@ -57,7 +60,7 @@
       {
         "code": 99,
         "message": "User not logged in / Insufficient permissions",
-        "_content": "The method requires user authentication but the user was not logged in, or the authenticated method call did not have the required permissions."
+				"_content": "The method requires user authentication but the user was not logged in, or the authenticated method call did not have the required permissions."
       },
       {
         "code": 100,

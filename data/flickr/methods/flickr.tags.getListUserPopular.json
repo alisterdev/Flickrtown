@@ -28,7 +28,7 @@
         "optional": "1",
         "_content": "Number of popular tags to return. defaults to 10 when this argument is not present."
       }
-    ]
+					]
   },
   "errors": {
     "error": [
@@ -36,7 +36,7 @@
         "code": "1",
         "message": "User not found",
         "_content": "The user NSID passed was not a valid user NSID and the calling user was not logged in.\r\n"
-      },
+              },
       {
         "code": 100,
         "message": "Invalid API Key",
@@ -60,7 +60,7 @@
       {
         "code": 112,
         "message": "Method \"xxx\" not found",
-        "_content": "The requested method was not found."
+ "_content": "The requested method was not found."
       },
       {
         "code": 114,

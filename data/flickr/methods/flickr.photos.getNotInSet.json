@@ -6,6 +6,7 @@
     "requiredperms": "1",
     "description": {
       "_content": "Returns a list of your photos that are not part of any sets."
+      "_content": "Returns a list of your photos that are not part of any sets."
     }
   },
   "arguments": {
@@ -17,7 +18,7 @@
       },
       {
         "name": "max_upload_date",
-        "optional": "1",
+              "optional": "1",
         "_content": "Maximum upload date. Photos with an upload date less than or equal to this value will be returned. The date can be in the form of a unix timestamp or mysql datetime."
       },
       {
@@ -38,6 +39,7 @@
       {
         "name": "media",
         "optional": "1",
+        "optional": "1",
         "_content": "Filter results by media type. Possible values are <code>all</code> (default), <code>photos</code> or <code>videos</code>"
       },
       {
@@ -57,16 +59,16 @@
       },
       {
         "name": "page",
-        "optional": 1,
+		"optional": 1,
         "_content": "The page of results to return. If this argument is omitted, it defaults to 1."
       }
     ]
-  },
-  "errors": {
+           },
+            "errors": {
     "error": [
       {
         "code": 95,
-        "message": "SSL is required",
+	"message": "SSL is required",
         "_content": "SSL is required to access the Flickr API."
       },
       {
@@ -78,13 +80,14 @@
         "code": 97,
         "message": "Missing signature",
         "_content": "The call required signing but no signature was sent."
-      },
+	},
       {
         "code": 98,
-        "message": "Login failed / Invalid auth token",
+         "message": "Login failed / Invalid auth token",
         "_content": "The login details or auth token passed were invalid."
-      },
+           },
       {
+        "code": 99,
         "code": 99,
         "message": "User not logged in / Insufficient permissions",
         "_content": "The method requires user authentication but the user was not logged in, or the authenticated method call did not have the required permissions."
@@ -93,14 +96,14 @@
         "code": 100,
         "message": "Invalid API Key",
         "_content": "The API key passed was not valid or has expired."
-      },
+    },
       {
         "code": 105,
         "message": "Service currently unavailable",
         "_content": "The requested service is temporarily unavailable."
-      },
+},
       {
-        "code": 106,
+           "code": 106,
         "message": "Write operation failed",
         "_content": "The requested operation failed due to a temporary issue."
       },
@@ -110,8 +113,8 @@
         "_content": "The requested response format was not found."
       },
       {
-        "code": 112,
-        "message": "Method \"xxx\" not found",
+"code": 112,
+"message": "Method \"xxx\" not found",
         "_content": "The requested method was not found."
       },
       {
@@ -129,7 +132,7 @@
         "message": "Bad URL found",
         "_content": "One or more arguments contained a URL that has been used for abuse on Flickr."
       }
-    ]
+ ]
   },
-  "stat": "ok"
-}
+	"stat": "ok"
+                }

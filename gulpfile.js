@@ -15,7 +15,7 @@ gulp.task('sass', function(done) {
     .pipe(gulp.dest('./public/css/'))
     .pipe(minifyCss({
       keepSpecialComments: 0
-    }))
+               }))
     .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest('./public/css/'))
     .on('end', done);

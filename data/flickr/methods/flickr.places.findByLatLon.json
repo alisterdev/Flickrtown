@@ -4,20 +4,20 @@
     "needslogin": 0,
     "needssigning": 0,
     "requiredperms": 0,
-    "description": {
+            "description": {
       "_content": "Return a place ID for a latitude, longitude and accuracy triple.<br /><br />\nThe flickr.places.findByLatLon method is not meant to be a (reverse) geocoder in the traditional sense. It is designed to allow users to find photos for \"places\" and will round up to the nearest place type to which corresponding place IDs apply.<br /><br />\nFor example, if you pass it a street level coordinate it will return the city that contains the point rather than the street, or building, itself.<br /><br />\nIt will also truncate latitudes and longitudes to three decimal points.\n\n"
     },
     "response": {
       "_content": "<places latitude=\"37.76513627957266\" longitude=\"-122.42020770907402\" accuracy=\"16\" total=\"1\">\n   <place place_id=\"Y12JWsKbApmnSQpbQg\" woeid=\"23512048\"\n      latitude=\"37.765\" longitude=\"-122.424\" \n      place_url=\"/United+States/California/San+Francisco/Mission+Dolores\"\n      place_type=\"neighbourhood\" place_type_id=\"22\" \n      timezone=\"America/Los_Angeles\"\n      name=\"Mission Dolores, San Francisco, CA, US, United States\"/>\n</places>"
     }
   },
-  "arguments": {
+      "arguments": {
     "argument": [
       {
         "name": "api_key",
-        "optional": 0,
+	"optional": 0,
         "_content": "Your API application key. <a href=\"/services/api/misc.api_keys.html\">See here</a> for more details."
-      },
+ },
       {
         "name": "lat",
         "optional": "0",
@@ -33,7 +33,7 @@
         "optional": "1",
         "_content": "Recorded accuracy level of the location information. World level is 1, Country is ~3, Region ~6, City ~11, Street ~16. Current range is 1-16. The default is 16."
       }
-    ]
+   ]
   },
   "errors": {
     "error": [
@@ -49,8 +49,8 @@
       },
       {
         "code": "3",
-        "message": "Not a valid longitude",
-        "_content": "The longitude argument failed validation."
+       "message": "Not a valid longitude",
+					"_content": "The longitude argument failed validation."
       },
       {
         "code": "4",
@@ -81,7 +81,7 @@
         "code": 112,
         "message": "Method \"xxx\" not found",
         "_content": "The requested method was not found."
-      },
+               },
       {
         "code": 114,
         "message": "Invalid SOAP envelope",
@@ -97,7 +97,7 @@
         "message": "Bad URL found",
         "_content": "One or more arguments contained a URL that has been used for abuse on Flickr."
       }
-    ]
+        ]
   },
   "stat": "ok"
 }

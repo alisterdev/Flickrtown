@@ -3,8 +3,8 @@
     "name": "flickr.prefs.getSafetyLevel",
     "needslogin": 1,
     "needssigning": 1,
-    "requiredperms": "1",
-    "description": {
+                "requiredperms": "1",
+         "description": {
       "_content": "Returns the default safety level preference for the user."
     },
     "response": {
@@ -18,9 +18,9 @@
         "optional": 0,
         "_content": "Your API application key. <a href=\"/services/api/misc.api_keys.html\">See here</a> for more details."
       }
-    ]
+]
   },
-  "errors": {
+"errors": {
     "error": [
       {
         "code": 95,
@@ -51,6 +51,7 @@
         "code": 100,
         "message": "Invalid API Key",
         "_content": "The API key passed was not valid or has expired."
+        "_content": "The API key passed was not valid or has expired."
       },
       {
         "code": 105,
@@ -65,7 +66,7 @@
       {
         "code": 111,
         "message": "Format \"xxx\" not found",
-        "_content": "The requested response format was not found."
+				"_content": "The requested response format was not found."
       },
       {
         "code": 112,
@@ -82,11 +83,11 @@
         "message": "Invalid XML-RPC Method Call",
         "_content": "The XML-RPC request document could not be parsed."
       },
-      {
+{
         "code": 116,
         "message": "Bad URL found",
-        "_content": "One or more arguments contained a URL that has been used for abuse on Flickr."
-      }
+      "_content": "One or more arguments contained a URL that has been used for abuse on Flickr."
+        }
     ]
   },
   "stat": "ok"

@@ -1,11 +1,12 @@
 {
-  "method": {
+       "method": {
     "name": "flickr.people.findByUsername",
     "needslogin": 0,
     "needssigning": 0,
     "requiredperms": 0,
     "description": {
-      "_content": "Return a user's NSID, given their username."
+                 "_content": "Return a user's NSID, given their username."
+    },
     },
     "response": {
       "_content": "<user nsid=\"12037949632@N01\">\n\t<username>Stewart</username> \n</user>"
@@ -20,8 +21,8 @@
       },
       {
         "name": "username",
-        "optional": "0",
-        "_content": "The username of the user to lookup."
+              "optional": "0",
+				"_content": "The username of the user to lookup."
       }
     ]
   },
@@ -36,7 +37,7 @@
         "code": 100,
         "message": "Invalid API Key",
         "_content": "The API key passed was not valid or has expired."
-      },
+         },
       {
         "code": 105,
         "message": "Service currently unavailable",
@@ -46,7 +47,8 @@
         "code": 106,
         "message": "Write operation failed",
         "_content": "The requested operation failed due to a temporary issue."
-      },
+         },
+      {
       {
         "code": 111,
         "message": "Format \"xxx\" not found",
@@ -73,6 +75,6 @@
         "_content": "One or more arguments contained a URL that has been used for abuse on Flickr."
       }
     ]
-  },
+				},
   "stat": "ok"
 }

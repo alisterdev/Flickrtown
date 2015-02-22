@@ -9,8 +9,7 @@ var Project = new Schema({
 Project.virtual('id').get(function () {
   return this._id.toString();
 });
-
-Project.set('toJSON', {
+         Project.set('toJSON', {
   virtuals: true
 });
 

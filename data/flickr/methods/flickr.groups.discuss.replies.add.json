@@ -5,25 +5,25 @@
     "needssigning": 1,
     "requiredperms": "2",
     "description": {
-      "_content": "Post a new reply to a group discussion topic."
+     "_content": "Post a new reply to a group discussion topic."
     }
   },
-  "arguments": {
+             "arguments": {
     "argument": [
       {
         "name": "api_key",
         "optional": 0,
-        "_content": "Your API application key. <a href=\"/services/api/misc.api_keys.html\">See here</a> for more details."
+ "_content": "Your API application key. <a href=\"/services/api/misc.api_keys.html\">See here</a> for more details."
       },
       {
         "name": "group_id",
         "optional": "0",
-        "_content": "Pass in the group id to where the topic belongs. Can be NSID or group alias. Making this parameter optional for legacy reasons, but it is highly recommended to pass this in to get faster performance. "
+            "_content": "Pass in the group id to where the topic belongs. Can be NSID or group alias. Making this parameter optional for legacy reasons, but it is highly recommended to pass this in to get faster performance. "
       },
       {
         "name": "topic_id",
         "optional": "0",
-        "_content": "The ID of the topic to post a comment to."
+	"_content": "The ID of the topic to post a comment to."
       },
       {
         "name": "message",
@@ -31,7 +31,7 @@
         "_content": "The message to post to the topic."
       }
     ]
-  },
+              },
   "errors": {
     "error": [
       {
@@ -39,7 +39,7 @@
         "message": "Topic not found",
         "_content": "The topic_id is invalid."
       },
-      {
+		{
         "code": "2",
         "message": "Cannot post to group",
         "_content": "Either this account is not a member of the group, or discussion in this group is disabled.\r\n"
@@ -53,7 +53,7 @@
         "code": 95,
         "message": "SSL is required",
         "_content": "SSL is required to access the Flickr API."
-      },
+         },
       {
         "code": 96,
         "message": "Invalid signature",
@@ -61,12 +61,12 @@
       },
       {
         "code": 97,
-        "message": "Missing signature",
+"message": "Missing signature",
         "_content": "The call required signing but no signature was sent."
       },
       {
-        "code": 98,
-        "message": "Login failed / Invalid auth token",
+			"code": 98,
+               "message": "Login failed / Invalid auth token",
         "_content": "The login details or auth token passed were invalid."
       },
       {
@@ -74,7 +74,7 @@
         "message": "User not logged in / Insufficient permissions",
         "_content": "The method requires user authentication but the user was not logged in, or the authenticated method call did not have the required permissions."
       },
-      {
+             {
         "code": 100,
         "message": "Invalid API Key",
         "_content": "The API key passed was not valid or has expired."
@@ -106,14 +106,14 @@
       },
       {
         "code": 115,
-        "message": "Invalid XML-RPC Method Call",
+              "message": "Invalid XML-RPC Method Call",
         "_content": "The XML-RPC request document could not be parsed."
       },
       {
-        "code": 116,
+	"code": 116,
         "message": "Bad URL found",
         "_content": "One or more arguments contained a URL that has been used for abuse on Flickr."
-      }
+         }
     ]
   },
   "stat": "ok"

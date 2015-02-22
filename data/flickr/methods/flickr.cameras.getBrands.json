@@ -7,7 +7,7 @@
     "description": {
       "_content": "Returns all the brands of cameras that Flickr knows about."
     },
-    "response": {
+				"response": {
       "_content": "<rsp stat=\"ok\">\n<brands>\n\t<brand id=\"canon\">Canon</brand>\n\t<brand id=\"nikon\">Nikon</brand>\n        <brand id=\"apple\">Apple</brand>\n</brands>\n</rsp>"
     }
   },
@@ -20,15 +20,15 @@
       }
     ]
   },
-  "errors": {
+					"errors": {
     "error": [
       {
         "code": 100,
-        "message": "Invalid API Key",
+      "message": "Invalid API Key",
         "_content": "The API key passed was not valid or has expired."
       },
       {
-        "code": 105,
+"code": 105,
         "message": "Service currently unavailable",
         "_content": "The requested service is temporarily unavailable."
       },
@@ -38,9 +38,9 @@
         "_content": "The requested operation failed due to a temporary issue."
       },
       {
-        "code": 111,
+"code": 111,
         "message": "Format \"xxx\" not found",
-        "_content": "The requested response format was not found."
+   "_content": "The requested response format was not found."
       },
       {
         "code": 112,
@@ -49,7 +49,7 @@
       },
       {
         "code": 114,
-        "message": "Invalid SOAP envelope",
+	"message": "Invalid SOAP envelope",
         "_content": "The SOAP envelope send in the request could not be parsed."
       },
       {
