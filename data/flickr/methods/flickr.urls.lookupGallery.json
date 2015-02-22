@@ -1,6 +1,6 @@
 {
   "method": {
-    "name": "flickr.urls.lookupGallery",
+		"name": "flickr.urls.lookupGallery",
     "needslogin": 0,
     "needssigning": 0,
     "requiredperms": 0,
@@ -39,7 +39,7 @@
         "code": 105,
         "message": "Service currently unavailable",
         "_content": "The requested service is temporarily unavailable."
-      },
+					},
       {
         "code": 106,
         "message": "Write operation failed",
@@ -54,23 +54,23 @@
         "code": 112,
         "message": "Method \"xxx\" not found",
         "_content": "The requested method was not found."
-      },
+                 },
       {
-        "code": 114,
+            "code": 114,
         "message": "Invalid SOAP envelope",
         "_content": "The SOAP envelope send in the request could not be parsed."
       },
       {
         "code": 115,
         "message": "Invalid XML-RPC Method Call",
-        "_content": "The XML-RPC request document could not be parsed."
+		"_content": "The XML-RPC request document could not be parsed."
       },
-      {
+            {
         "code": 116,
         "message": "Bad URL found",
         "_content": "One or more arguments contained a URL that has been used for abuse on Flickr."
       }
     ]
   },
-  "stat": "ok"
+"stat": "ok"
 }

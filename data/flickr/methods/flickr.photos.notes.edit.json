@@ -1,8 +1,8 @@
 {
   "method": {
-    "name": "flickr.photos.notes.edit",
+               "name": "flickr.photos.notes.edit",
     "needslogin": 1,
-    "needssigning": 1,
+ "needssigning": 1,
     "requiredperms": "2",
     "description": {
       "_content": "Edit a note on a photo. Coordinates and sizes are in pixels, based on the 500px image size shown on individual photo pages.\n"
@@ -22,12 +22,12 @@
       },
       {
         "name": "note_x",
-        "optional": "0",
+     "optional": "0",
         "_content": "The left coordinate of the note"
       },
       {
         "name": "note_y",
-        "optional": "0",
+           "optional": "0",
         "_content": "The top coordinate of the note"
       },
       {
@@ -37,7 +37,7 @@
       },
       {
         "name": "note_h",
-        "optional": "0",
+       "optional": "0",
         "_content": "The height of the note"
       },
       {
@@ -54,7 +54,7 @@
         "message": "Note not found",
         "_content": "The note id passed was not a valid note id"
       },
-      {
+		{
         "code": "2",
         "message": "User cannot edit note",
         "_content": "The calling user does not have permission to edit the specified note"
@@ -67,6 +67,7 @@
       {
         "code": 95,
         "message": "SSL is required",
+        "_content": "SSL is required to access the Flickr API."
         "_content": "SSL is required to access the Flickr API."
       },
       {
@@ -92,7 +93,7 @@
       {
         "code": 100,
         "message": "Invalid API Key",
-        "_content": "The API key passed was not valid or has expired."
+     "_content": "The API key passed was not valid or has expired."
       },
       {
         "code": 105,
@@ -122,7 +123,7 @@
       {
         "code": 115,
         "message": "Invalid XML-RPC Method Call",
-        "_content": "The XML-RPC request document could not be parsed."
+				"_content": "The XML-RPC request document could not be parsed."
       },
       {
         "code": 116,

@@ -1,13 +1,13 @@
 {
   "method": {
     "name": "flickr.test.login",
-    "needslogin": 1,
+      "needslogin": 1,
     "needssigning": 1,
     "requiredperms": "1",
     "description": {
       "_content": "A testing method which checks if the caller is logged in then returns their username."
     },
-    "response": {
+	"response": {
       "_content": "<user id=\"12037949754@N01\">\n\t<username>Bees</username> \n</user>\n"
     }
   },
@@ -23,10 +23,11 @@
   "errors": {
     "error": [
       {
+      {
         "code": 95,
         "message": "SSL is required",
         "_content": "SSL is required to access the Flickr API."
-      },
+},
       {
         "code": 96,
         "message": "Invalid signature",
@@ -37,11 +38,11 @@
         "message": "Missing signature",
         "_content": "The call required signing but no signature was sent."
       },
-      {
+{
         "code": 98,
         "message": "Login failed / Invalid auth token",
         "_content": "The login details or auth token passed were invalid."
-      },
+},
       {
         "code": 99,
         "message": "User not logged in / Insufficient permissions",
@@ -49,9 +50,9 @@
       },
       {
         "code": 100,
-        "message": "Invalid API Key",
+           "message": "Invalid API Key",
         "_content": "The API key passed was not valid or has expired."
-      },
+                 },
       {
         "code": 105,
         "message": "Service currently unavailable",
@@ -70,24 +71,24 @@
       {
         "code": 112,
         "message": "Method \"xxx\" not found",
-        "_content": "The requested method was not found."
+ "_content": "The requested method was not found."
       },
       {
         "code": 114,
-        "message": "Invalid SOAP envelope",
+	"message": "Invalid SOAP envelope",
         "_content": "The SOAP envelope send in the request could not be parsed."
       },
       {
         "code": 115,
         "message": "Invalid XML-RPC Method Call",
-        "_content": "The XML-RPC request document could not be parsed."
+	"_content": "The XML-RPC request document could not be parsed."
       },
       {
-        "code": 116,
+		"code": 116,
         "message": "Bad URL found",
         "_content": "One or more arguments contained a URL that has been used for abuse on Flickr."
       }
-    ]
-  },
+         ]
+   },
   "stat": "ok"
 }

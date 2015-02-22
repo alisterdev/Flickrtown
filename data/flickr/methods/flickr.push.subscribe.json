@@ -21,11 +21,12 @@
         "_content": "The type of subscription. See <a href=\"http://www.flickr.com/services/api/flickr.push.getTopics.htm\">flickr.push.getTopics</a>."
       },
       {
+      {
         "name": "callback",
         "optional": "0",
         "_content": "The url for the subscription endpoint. Limited to 255 bytes, and must be unique for this user, i.e. no two subscriptions for a given user may use the same callback url."
       },
-      {
+			{
         "name": "verify",
         "optional": "0",
         "_content": "The verification mode, either <code>sync</code> or <code>async</code>. See the <a href=\"http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.3.html#subscribingl\">Google PubSubHubbub spec</a> for details."
@@ -46,13 +47,13 @@
         "_content": "A 32-bit integer for a <a href=\"http://developer.yahoo.com/geo/geoplanet/\">Where on Earth ID</a>. Only valid if <code>topic</code> is <code>geo</code>.\r\n<br/><br/>\r\nThe order of precedence for geo subscriptions is : woe ids, place ids, radial i.e. the <code>lat, lon</code> parameters will be ignored if <code>place_ids</code> is present, which will be ignored if <code>woe_ids</code> is present."
       },
       {
-        "name": "place_ids",
+"name": "place_ids",
         "optional": "1",
-        "_content": "A comma-separated list of Flickr place IDs. Only valid if <code>topic</code> is <code>geo</code>.\r\n<br/><br/>\r\nThe order of precedence for geo subscriptions is : woe ids, place ids, radial i.e. the <code>lat, lon</code> parameters will be ignored if <code>place_ids</code> is present, which will be ignored if <code>woe_ids</code> is present."
+             "_content": "A comma-separated list of Flickr place IDs. Only valid if <code>topic</code> is <code>geo</code>.\r\n<br/><br/>\r\nThe order of precedence for geo subscriptions is : woe ids, place ids, radial i.e. the <code>lat, lon</code> parameters will be ignored if <code>place_ids</code> is present, which will be ignored if <code>woe_ids</code> is present."
       },
-      {
+                {
         "name": "lat",
-        "optional": "1",
+                 "optional": "1",
         "_content": "A latitude value, in decimal format. Only valid if <code>topic</code> is <code>geo</code>. Defines the latitude for a radial query centered around (lat, lon).\r\n<br/><br/>\r\nThe order of precedence for geo subscriptions is : woe ids, place ids, radial i.e. the <code>lat, lon</code> parameters will be ignored if <code>place_ids</code> is present, which will be ignored if <code>woe_ids</code> is present."
       },
       {
@@ -70,11 +71,11 @@
         "optional": "1",
         "_content": "Defines the units for the radius parameter. Only valid if <code>topic</code> is <code>geo</code>. Options are <code>mi</code> and <code>km</code>. Default is <code>km</code>.\r\n<br/><br/>\r\nThe order of precedence for geo subscriptions is : woe ids, place ids, radial i.e. the <code>lat, lon</code> parameters will be ignored if <code>place_ids</code> is present, which will be ignored if <code>woe_ids</code> is present."
       },
-      {
+					{
         "name": "accuracy",
         "optional": "1",
         "_content": "Defines the minimum accuracy required for photos to be included in a subscription. Only valid if <code>topic</code> is <code>geo</code> Legal values are 1-16, default is 1 (i.e. any accuracy level).\r\n<ul>\r\n<li>World level is 1</li>\r\n<li>Country is ~3</li>\r\n<li>Region is ~6</li>\r\n<li>City is ~11</li>\r\n<li>Street is ~16</li>\r\n</ul>"
-      },
+        },
       {
         "name": "nsids",
         "optional": "1",
@@ -88,7 +89,6 @@
     ]
   },
   "errors": {
-    "error": [
       {
         "code": "1",
         "message": "Required parameter missing",
@@ -97,7 +97,7 @@
       {
         "code": "2",
         "message": "Invalid parameter value",
-        "_content": "One of the arguments was specified with an illegal value."
+              "_content": "One of the arguments was specified with an illegal value."
       },
       {
         "code": "3",
@@ -107,8 +107,9 @@
       {
         "code": "4",
         "message": "Callback failed or invalid response",
-        "_content": "The verification callback failed, or failed to return the expected response to confirm the subscription."
+"_content": "The verification callback failed, or failed to return the expected response to confirm the subscription."
       },
+      {
       {
         "code": "5",
         "message": "Service currently available only to pro accounts",
@@ -123,7 +124,7 @@
         "code": 95,
         "message": "SSL is required",
         "_content": "SSL is required to access the Flickr API."
-      },
+                },
       {
         "code": 96,
         "message": "Invalid signature",
@@ -131,10 +132,10 @@
       },
       {
         "code": 97,
-        "message": "Missing signature",
+		"message": "Missing signature",
         "_content": "The call required signing but no signature was sent."
       },
-      {
+		{
         "code": 98,
         "message": "Login failed / Invalid auth token",
         "_content": "The login details or auth token passed were invalid."
@@ -144,7 +145,7 @@
         "message": "User not logged in / Insufficient permissions",
         "_content": "The method requires user authentication but the user was not logged in, or the authenticated method call did not have the required permissions."
       },
-      {
+   {
         "code": 100,
         "message": "Invalid API Key",
         "_content": "The API key passed was not valid or has expired."
@@ -155,7 +156,7 @@
         "_content": "The requested service is temporarily unavailable."
       },
       {
-        "code": 106,
+			"code": 106,
         "message": "Write operation failed",
         "_content": "The requested operation failed due to a temporary issue."
       },
@@ -169,7 +170,6 @@
         "message": "Method \"xxx\" not found",
         "_content": "The requested method was not found."
       },
-      {
         "code": 114,
         "message": "Invalid SOAP envelope",
         "_content": "The SOAP envelope send in the request could not be parsed."

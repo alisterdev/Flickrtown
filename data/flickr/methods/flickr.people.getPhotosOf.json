@@ -1,5 +1,5 @@
 {
-  "method": {
+	"method": {
     "name": "flickr.people.getPhotosOf",
     "needslogin": 0,
     "needssigning": 0,
@@ -17,7 +17,7 @@
   "arguments": {
     "argument": [
       {
-        "name": "api_key",
+             "name": "api_key",
         "optional": 0,
         "_content": "Your API application key. <a href=\"/services/api/misc.api_keys.html\">See here</a> for more details."
       },
@@ -39,7 +39,7 @@
       {
         "name": "per_page",
         "optional": 1,
-        "_content": "Number of photos to return per page. If this argument is omitted, it defaults to 100. The maximum allowed value is 500."
+ "_content": "Number of photos to return per page. If this argument is omitted, it defaults to 100. The maximum allowed value is 500."
       },
       {
         "name": "page",
@@ -54,9 +54,9 @@
         "code": "1",
         "message": "User not found.",
         "_content": "A user_id was passed which did not match a valid flickr user."
-      },
+         },
       {
-        "code": 100,
+"code": 100,
         "message": "Invalid API Key",
         "_content": "The API key passed was not valid or has expired."
       },
@@ -76,15 +76,16 @@
         "_content": "The requested response format was not found."
       },
       {
-        "code": 112,
+  "code": 112,
         "message": "Method \"xxx\" not found",
         "_content": "The requested method was not found."
       },
       {
         "code": 114,
         "message": "Invalid SOAP envelope",
+        "message": "Invalid SOAP envelope",
         "_content": "The SOAP envelope send in the request could not be parsed."
-      },
+	},
       {
         "code": 115,
         "message": "Invalid XML-RPC Method Call",

@@ -1,6 +1,6 @@
 {
   "method": {
-    "name": "flickr.photosets.editPhotos",
+      "name": "flickr.photosets.editPhotos",
     "needslogin": 1,
     "needssigning": 1,
     "requiredperms": "2",
@@ -15,21 +15,21 @@
         "optional": 0,
         "_content": "Your API application key. <a href=\"/services/api/misc.api_keys.html\">See here</a> for more details."
       },
-      {
+{
         "name": "photoset_id",
         "optional": "0",
-        "_content": "The id of the photoset to modify. The photoset must belong to the calling user."
+"_content": "The id of the photoset to modify. The photoset must belong to the calling user."
       },
       {
         "name": "primary_photo_id",
-        "optional": "0",
+		"optional": "0",
         "_content": "The id of the photo to use as the 'primary' photo for the set. This id must also be passed along in photo_ids list argument."
       },
       {
         "name": "photo_ids",
         "optional": "0",
         "_content": "A comma-delimited list of photo ids to include in the set. They will appear in the set in the order sent. This list <b>must</b> contain the primary photo id. All photos must belong to the owner of the set. This list of photos replaces the existing list. Call flickr.photosets.addPhoto to append a photo to a set."
-      }
+}
     ]
   },
   "errors": {
@@ -42,7 +42,7 @@
       {
         "code": "2",
         "message": "Photo not found",
-        "_content": "One or more of the photo ids passed was not a valid photo id or does not belong to the calling user."
+					"_content": "One or more of the photo ids passed was not a valid photo id or does not belong to the calling user."
       },
       {
         "code": "3",
@@ -74,7 +74,7 @@
         "message": "Missing signature",
         "_content": "The call required signing but no signature was sent."
       },
-      {
+				{
         "code": 98,
         "message": "Login failed / Invalid auth token",
         "_content": "The login details or auth token passed were invalid."
@@ -93,10 +93,10 @@
         "code": 105,
         "message": "Service currently unavailable",
         "_content": "The requested service is temporarily unavailable."
-      },
+		},
       {
         "code": 106,
-        "message": "Write operation failed",
+					"message": "Write operation failed",
         "_content": "The requested operation failed due to a temporary issue."
       },
       {
@@ -119,11 +119,12 @@
         "message": "Invalid XML-RPC Method Call",
         "_content": "The XML-RPC request document could not be parsed."
       },
-      {
+        {
         "code": 116,
         "message": "Bad URL found",
         "_content": "One or more arguments contained a URL that has been used for abuse on Flickr."
       }
+    ]
     ]
   },
   "stat": "ok"

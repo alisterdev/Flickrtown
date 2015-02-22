@@ -1,6 +1,6 @@
 {
   "method": {
-    "name": "flickr.places.resolvePlaceId",
+					"name": "flickr.places.resolvePlaceId",
     "needslogin": 0,
     "needssigning": 0,
     "requiredperms": 0,
@@ -10,7 +10,7 @@
     "response": {
       "_content": "<location place_id=\"kH8dLOubBZRvX_YZ\" woeid=\"2487956\" \n                latitude=\"37.779\" longitude=\"-122.420\"\n                place_url=\"/United+States/California/San+Francisco\"\n                place_type=\"locality\">\n   <locality place_id=\"kH8dLOubBZRvX_YZ\" woeid=\"2487956\"\n                 latitude=\"37.779\" longitude=\"-122.420\" \n                 place_url=\"/United+States/California/San+Francisco\">San Francisco</locality>\n   <county place_id=\"hCca8XSYA5nn0X1Sfw\" woeid=\"12587707\"\n                 latitude=\"37.759\" longitude=\"-122.435\" \n                 place_url=\"/hCca8XSYA5nn0X1Sfw\">San Francisco</county>\n   <region place_id=\"SVrAMtCbAphCLAtP\" woeid=\"2347563\" \n                latitude=\"37.271\" longitude=\"-119.270\" \n                place_url=\"/United+States/California\">California</region>\n   <country place_id=\"4KO02SibApitvSBieQ\" woeid=\"23424977\"\n                  latitude=\"48.890\" longitude=\"-116.982\" \n                  place_url=\"/United+States\">United States</country>\n</location>"
     }
-  },
+            },
   "arguments": {
     "argument": [
       {
@@ -36,8 +36,8 @@
         "code": "3",
         "message": "Place not found.",
         "_content": ""
-      },
-      {
+  },
+			{
         "code": 100,
         "message": "Invalid API Key",
         "_content": "The API key passed was not valid or has expired."
@@ -69,14 +69,14 @@
       },
       {
         "code": 115,
-        "message": "Invalid XML-RPC Method Call",
+		"message": "Invalid XML-RPC Method Call",
         "_content": "The XML-RPC request document could not be parsed."
       },
       {
         "code": 116,
         "message": "Bad URL found",
-        "_content": "One or more arguments contained a URL that has been used for abuse on Flickr."
-      }
+"_content": "One or more arguments contained a URL that has been used for abuse on Flickr."
+       }
     ]
   },
   "stat": "ok"

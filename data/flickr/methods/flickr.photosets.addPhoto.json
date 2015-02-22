@@ -6,9 +6,9 @@
     "requiredperms": "2",
     "description": {
       "_content": "Add a photo to the end of an existing photoset."
-    }
-  },
-  "arguments": {
+               }
+        },
+           "arguments": {
     "argument": [
       {
         "name": "api_key",
@@ -41,7 +41,7 @@
       },
       {
         "code": "3",
-        "message": "Photo already in set",
+          "message": "Photo already in set",
         "_content": "The photo is already a member of the photoset."
       },
       {
@@ -51,7 +51,7 @@
       },
       {
         "code": 95,
-        "message": "SSL is required",
+					"message": "SSL is required",
         "_content": "SSL is required to access the Flickr API."
       },
       {
@@ -59,7 +59,7 @@
         "message": "Invalid signature",
         "_content": "The passed signature was invalid."
       },
-      {
+         {
         "code": 97,
         "message": "Missing signature",
         "_content": "The call required signing but no signature was sent."
@@ -87,7 +87,7 @@
       {
         "code": 106,
         "message": "Write operation failed",
-        "_content": "The requested operation failed due to a temporary issue."
+                 "_content": "The requested operation failed due to a temporary issue."
       },
       {
         "code": 111,
@@ -109,12 +109,13 @@
         "message": "Invalid XML-RPC Method Call",
         "_content": "The XML-RPC request document could not be parsed."
       },
+      },
       {
         "code": 116,
         "message": "Bad URL found",
         "_content": "One or more arguments contained a URL that has been used for abuse on Flickr."
       }
     ]
-  },
+		},
   "stat": "ok"
 }

@@ -3,8 +3,9 @@
     "name": "flickr.photos.getContactsPhotos",
     "needslogin": 1,
     "needssigning": 1,
-    "requiredperms": "1",
+               "requiredperms": "1",
     "description": {
+      "_content": "Fetch a list of recent photos from the calling users' contacts."
       "_content": "Fetch a list of recent photos from the calling users' contacts."
     },
     "response": {
@@ -16,7 +17,7 @@
       {
         "name": "api_key",
         "optional": 0,
-        "_content": "Your API application key. <a href=\"/services/api/misc.api_keys.html\">See here</a> for more details."
+     "_content": "Your API application key. <a href=\"/services/api/misc.api_keys.html\">See here</a> for more details."
       },
       {
         "name": "count",
@@ -27,7 +28,7 @@
         "name": "just_friends",
         "optional": "1",
         "_content": "set as 1 to only show photos from friends and family (excluding regular contacts)."
-      },
+			},
       {
         "name": "single_photo",
         "optional": "1",
@@ -39,20 +40,19 @@
         "_content": "Set to 1 to include photos from the calling user."
       },
       {
-        "name": "extras",
+				"name": "extras",
         "optional": "1",
         "_content": "A comma-delimited list of extra information to fetch for each returned record. Currently supported fields include: license, date_upload, date_taken, owner_name, icon_server, original_format, last_update. For more information see extras under <a href=\"/services/api/flickr.photos.search.html\">flickr.photos.search</a>."
-      }
+					}
     ]
   },
   "errors": {
-    "error": [
+	"error": [
       {
         "code": 95,
         "message": "SSL is required",
         "_content": "SSL is required to access the Flickr API."
       },
-      {
         "code": 96,
         "message": "Invalid signature",
         "_content": "The passed signature was invalid."
@@ -76,12 +76,12 @@
         "code": 100,
         "message": "Invalid API Key",
         "_content": "The API key passed was not valid or has expired."
-      },
+				},
       {
         "code": 105,
         "message": "Service currently unavailable",
         "_content": "The requested service is temporarily unavailable."
-      },
+				},
       {
         "code": 106,
         "message": "Write operation failed",
@@ -101,13 +101,15 @@
         "code": 114,
         "message": "Invalid SOAP envelope",
         "_content": "The SOAP envelope send in the request could not be parsed."
+        "_content": "The SOAP envelope send in the request could not be parsed."
       },
       {
         "code": 115,
         "message": "Invalid XML-RPC Method Call",
         "_content": "The XML-RPC request document could not be parsed."
+        "_content": "The XML-RPC request document could not be parsed."
       },
-      {
+        {
         "code": 116,
         "message": "Bad URL found",
         "_content": "One or more arguments contained a URL that has been used for abuse on Flickr."

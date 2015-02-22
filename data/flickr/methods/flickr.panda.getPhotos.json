@@ -13,7 +13,7 @@
     "explanation": {
       "_content": "When calling this API method please ensure that your code uses the <strong>lastupdate</strong> and <strong>interval</strong> attributes to determine when to request new photos. <em>lastupdate</em> is a Unix timestamp indicating when the list of photos was generated and <em>interval</em> is the number of seconds to wait before polling the Flickr API again."
     }
-  },
+					},
   "arguments": {
     "argument": [
       {
@@ -33,13 +33,13 @@
       },
       {
         "name": "per_page",
-        "optional": 1,
+			"optional": 1,
         "_content": "Number of photos to return per page. If this argument is omitted, it defaults to 100. The maximum allowed value is 500."
       },
       {
         "name": "page",
         "optional": 1,
-        "_content": "The page of results to return. If this argument is omitted, it defaults to 1."
+                "_content": "The page of results to return. If this argument is omitted, it defaults to 1."
       }
     ]
   },
@@ -51,12 +51,12 @@
         "_content": "One or more required parameters was not included with your request."
       },
       {
-        "code": "2",
+		"code": "2",
         "message": "Unknown panda",
         "_content": "You requested a panda we haven't met yet."
       },
       {
-        "code": 100,
+"code": 100,
         "message": "Invalid API Key",
         "_content": "The API key passed was not valid or has expired."
       },
@@ -69,7 +69,7 @@
         "code": 106,
         "message": "Write operation failed",
         "_content": "The requested operation failed due to a temporary issue."
-      },
+					},
       {
         "code": 111,
         "message": "Format \"xxx\" not found",
@@ -77,7 +77,7 @@
       },
       {
         "code": 112,
-        "message": "Method \"xxx\" not found",
+		"message": "Method \"xxx\" not found",
         "_content": "The requested method was not found."
       },
       {
@@ -98,4 +98,4 @@
     ]
   },
   "stat": "ok"
-}
+              }

@@ -18,14 +18,14 @@
         "optional": 0,
         "_content": "Your API application key. <a href=\"/services/api/misc.api_keys.html\">See here</a> for more details."
       },
-      {
+	{
         "name": "dates",
         "optional": "1",
         "_content": "A comma delimited list of unix timestamps, denoting the periods to return counts for. They should be specified <b>smallest first</b>."
       },
       {
         "name": "taken_dates",
-        "optional": "1",
+"optional": "1",
         "_content": "A comma delimited list of mysql datetimes, denoting the periods to return counts for. They should be specified <b>smallest first</b>."
       }
     ]
@@ -59,7 +59,7 @@
       },
       {
         "code": 99,
-        "message": "User not logged in / Insufficient permissions",
+			"message": "User not logged in / Insufficient permissions",
         "_content": "The method requires user authentication but the user was not logged in, or the authenticated method call did not have the required permissions."
       },
       {
@@ -85,7 +85,7 @@
       {
         "code": 112,
         "message": "Method \"xxx\" not found",
-        "_content": "The requested method was not found."
+            "_content": "The requested method was not found."
       },
       {
         "code": 114,

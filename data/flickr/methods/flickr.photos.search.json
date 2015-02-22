@@ -2,7 +2,6 @@
   "method": {
     "name": "flickr.photos.search",
     "needslogin": 0,
-    "needssigning": 0,
     "requiredperms": 0,
     "description": {
       "_content": "Return a list of photos matching some criteria. Only photos visible to the calling user will be returned. To return private or semi-private photos, the caller must be authenticated with 'read' permissions, and have permission to view the photos. Unauthenticated calls will only return public photos."
@@ -15,7 +14,7 @@
     "argument": [
       {
         "name": "api_key",
-        "optional": 0,
+              "optional": 0,
         "_content": "Your API application key. <a href=\"/services/api/misc.api_keys.html\">See here</a> for more details."
       },
       {
@@ -31,28 +30,28 @@
       {
         "name": "tag_mode",
         "optional": "1",
-        "_content": "Either 'any' for an OR combination of tags, or 'all' for an AND combination. Defaults to 'any' if not specified."
+  "_content": "Either 'any' for an OR combination of tags, or 'all' for an AND combination. Defaults to 'any' if not specified."
       },
       {
-        "name": "text",
+		"name": "text",
         "optional": "1",
         "_content": "A free text search. Photos who's title, description or tags contain the text will be returned. You can exclude results that match a term by prepending it with a - character."
       },
       {
         "name": "min_upload_date",
-        "optional": "1",
+       "optional": "1",
         "_content": "Minimum upload date. Photos with an upload date greater than or equal to this value will be returned. The date can be in the form of a unix timestamp or mysql datetime."
       },
       {
         "name": "max_upload_date",
-        "optional": "1",
+"optional": "1",
         "_content": "Maximum upload date. Photos with an upload date less than or equal to this value will be returned. The date can be in the form of a unix timestamp or mysql datetime."
       },
       {
         "name": "min_taken_date",
         "optional": "1",
         "_content": "Minimum taken date. Photos with an taken date greater than or equal to this value will be returned. The date can be in the form of a mysql datetime or unix timestamp."
-      },
+                },
       {
         "name": "max_taken_date",
         "optional": "1",
@@ -97,7 +96,7 @@
         "name": "machine_tags",
         "optional": "1",
         "_content": "Aside from passing in a fully formed machine tag, there is a special syntax for searching on specific properties :\r\n\r\n<ul>\r\n  <li>Find photos using the 'dc' namespace :    <code>\"machine_tags\" => \"dc:\"</code></li>\r\n\r\n  <li> Find photos with a title in the 'dc' namespace : <code>\"machine_tags\" => \"dc:title=\"</code></li>\r\n\r\n  <li>Find photos titled \"mr. camera\" in the 'dc' namespace : <code>\"machine_tags\" => \"dc:title=\\\"mr. camera\\\"</code></li>\r\n\r\n  <li>Find photos whose value is \"mr. camera\" : <code>\"machine_tags\" => \"*:*=\\\"mr. camera\\\"\"</code></li>\r\n\r\n  <li>Find photos that have a title, in any namespace : <code>\"machine_tags\" => \"*:title=\"</code></li>\r\n\r\n  <li>Find photos that have a title, in any namespace, whose value is \"mr. camera\" : <code>\"machine_tags\" => \"*:title=\\\"mr. camera\\\"\"</code></li>\r\n\r\n  <li>Find photos, in the 'dc' namespace whose value is \"mr. camera\" : <code>\"machine_tags\" => \"dc:*=\\\"mr. camera\\\"\"</code></li>\r\n\r\n </ul>\r\n\r\nMultiple machine tags may be queried by passing a comma-separated list. The number of machine tags you can pass in a single query depends on the tag mode (AND or OR) that you are querying with. \"AND\" queries are limited to (16) machine tags. \"OR\" queries are limited\r\nto (8)."
-      },
+		},
       {
         "name": "machine_tag_mode",
         "optional": "1",
@@ -113,7 +112,7 @@
         "optional": "1",
         "_content": "Search your contacts. Either 'all' or 'ff' for just friends and family. (Experimental)"
       },
-      {
+		{
         "name": "woe_id",
         "optional": "1",
         "_content": "A 32-bit identifier that uniquely represents spatial entities. (not used if bbox argument is present). \r\n<br /><br />\r\nGeo queries require some sort of limiting agent in order to prevent the database from crying. This is basically like the check against \"parameterless searches\" for queries without a geo component.\r\n<br /><br />\r\nA tag, for instance, is considered a limiting agent as are user defined min_date_taken and min_date_upload parameters &mdash; If no limiting factor is passed we return only photos added in the last 12 hours (though we may extend the limit in the future)."
@@ -122,24 +121,24 @@
         "name": "place_id",
         "optional": "1",
         "_content": "A Flickr place id.  (not used if bbox argument is present).\r\n<br /><br />\r\nGeo queries require some sort of limiting agent in order to prevent the database from crying. This is basically like the check against \"parameterless searches\" for queries without a geo component.\r\n<br /><br />\r\nA tag, for instance, is considered a limiting agent as are user defined min_date_taken and min_date_upload parameters &mdash; If no limiting factor is passed we return only photos added in the last 12 hours (though we may extend the limit in the future)."
-      },
-      {
+					},
+         {
         "name": "media",
         "optional": "1",
         "_content": "Filter results by media type. Possible values are <code>all</code> (default), <code>photos</code> or <code>videos</code>"
-      },
+},
       {
         "name": "has_geo",
         "optional": "1",
         "_content": "Any photo that has been geotagged, or if the value is \"0\" any photo that has <i>not</i> been geotagged.\r\n<br /><br />\r\nGeo queries require some sort of limiting agent in order to prevent the database from crying. This is basically like the check against \"parameterless searches\" for queries without a geo component.\r\n<br /><br />\r\nA tag, for instance, is considered a limiting agent as are user defined min_date_taken and min_date_upload parameters &mdash; If no limiting factor is passed we return only photos added in the last 12 hours (though we may extend the limit in the future)."
-      },
-      {
+                 },
+                 {
         "name": "geo_context",
         "optional": "1",
         "_content": "Geo context is a numeric value representing the photo's geotagginess beyond latitude and longitude. For example, you may wish to search for photos that were taken \"indoors\" or \"outdoors\". <br /><br />\r\nThe current list of context IDs is :<br /><br/>\r\n<ul>\r\n<li><strong>0</strong>, not defined.</li>\r\n<li><strong>1</strong>, indoors.</li>\r\n<li><strong>2</strong>, outdoors.</li>\r\n</ul>\r\n<br /><br />\r\nGeo queries require some sort of limiting agent in order to prevent the database from crying. This is basically like the check against \"parameterless searches\" for queries without a geo component.\r\n<br /><br />\r\nA tag, for instance, is considered a limiting agent as are user defined min_date_taken and min_date_upload parameters &mdash; If no limiting factor is passed we return only photos added in the last 12 hours (though we may extend the limit in the future)."
       },
       {
-        "name": "lat",
+"name": "lat",
         "optional": "1",
         "_content": "A valid latitude, in decimal format, for doing radial geo queries.\r\n<br /><br />\r\nGeo queries require some sort of limiting agent in order to prevent the database from crying. This is basically like the check against \"parameterless searches\" for queries without a geo component.\r\n<br /><br />\r\nA tag, for instance, is considered a limiting agent as are user defined min_date_taken and min_date_upload parameters &mdash; If no limiting factor is passed we return only photos added in the last 12 hours (though we may extend the limit in the future)."
       },
@@ -155,7 +154,7 @@
       },
       {
         "name": "radius_units",
-        "optional": "1",
+         "optional": "1",
         "_content": "The unit of measure when doing radial geo queries. Valid options are \"mi\" (miles) and \"km\" (kilometers). The default is \"km\"."
       },
       {
@@ -163,9 +162,9 @@
         "optional": "1",
         "_content": "Limit the scope of the search to only photos that are part of the <a href=\"http://flickr.com/commons\">Flickr Commons project</a>. Default is false."
       },
-      {
+                 {
         "name": "in_gallery",
-        "optional": "1",
+		"optional": "1",
         "_content": "Limit the scope of the search to only photos that are in a <a href=\"http://www.flickr.com/help/galleries/\">gallery</a>?  Default is false, search all photos."
       },
       {
@@ -173,8 +172,8 @@
         "optional": "1",
         "_content": "Limit the scope of the search to only photos that are for sale on Getty. Default is false."
       },
-      {
-        "name": "extras",
+ {
+	"name": "extras",
         "optional": 1,
         "_content": "A comma-delimited list of extra information to fetch for each returned record. Currently supported fields are: <code>description</code>, <code>license</code>, <code>date_upload</code>, <code>date_taken</code>, <code>owner_name</code>, <code>icon_server</code>, <code>original_format</code>, <code>last_update</code>, <code>geo</code>, <code>tags</code>, <code>machine_tags</code>, <code>o_dims</code>, <code>views</code>, <code>media</code>, <code>path_alias</code>, <code>url_sq</code>, <code>url_t</code>, <code>url_s</code>, <code>url_q</code>, <code>url_m</code>, <code>url_n</code>, <code>url_z</code>, <code>url_c</code>, <code>url_l</code>, <code>url_o</code>"
       },
@@ -192,22 +191,22 @@
   },
   "errors": {
     "error": [
-      {
+{
         "code": "1",
-        "message": "Too many tags in ALL query",
+      "message": "Too many tags in ALL query",
         "_content": "When performing an 'all tags' search, you may not specify more than 20 tags to join together."
       },
       {
-        "code": "2",
         "message": "Unknown user",
         "_content": "A user_id was passed which did not match a valid flickr user."
-      },
+                },
       {
         "code": "3",
         "message": "Parameterless searches have been disabled",
         "_content": "To perform a search with no parameters (to get the latest public photos, please use flickr.photos.getRecent instead)."
       },
-      {
+              {
+        "code": "4",
         "code": "4",
         "message": "You don't have permission to view this pool",
         "_content": "The logged in user (if any) does not have permission to view the pool for this group."
@@ -226,8 +225,8 @@
         "code": "12",
         "message": "Exceeded maximum allowable machine tags",
         "_content": "The maximum number of machine tags in a single query was exceeded."
-      },
-      {
+  },
+                 {
         "code": "13",
         "message": "jump_to not avaiable for this query",
         "_content": "jump_to only supported for some query types."
@@ -235,7 +234,7 @@
       {
         "code": "14",
         "message": "Bad value for jump_to",
-        "_content": "jump_to must be valid photo ID."
+		"_content": "jump_to must be valid photo ID."
       },
       {
         "code": "15",
@@ -258,7 +257,7 @@
         "_content": "The request contained contradictory arguments."
       },
       {
-        "code": "20",
+			"code": "20",
         "message": "Excessive photo offset in search",
         "_content": "The search requested photos beyond an allowable offset. Reduce the page number or number of results per page for this search."
       },
@@ -268,9 +267,9 @@
         "_content": "The API key passed was not valid or has expired."
       },
       {
-        "code": 105,
+            "code": 105,
         "message": "Service currently unavailable",
-        "_content": "The requested service is temporarily unavailable."
+"_content": "The requested service is temporarily unavailable."
       },
       {
         "code": 106,
@@ -289,7 +288,7 @@
       },
       {
         "code": 114,
-        "message": "Invalid SOAP envelope",
+  "message": "Invalid SOAP envelope",
         "_content": "The SOAP envelope send in the request could not be parsed."
       },
       {

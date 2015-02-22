@@ -1,9 +1,9 @@
-{
+   {
   "method": {
     "name": "flickr.galleries.editPhotos",
     "needslogin": 1,
     "needssigning": 1,
-    "requiredperms": "2",
+       "requiredperms": "2",
     "description": {
       "_content": "Modify the photos in a gallery. Use this method to add, remove and re-order photos."
     }
@@ -26,6 +26,7 @@
         "_content": "The id of the photo to use as the 'primary' photo for the gallery. This id must also be passed along in photo_ids list argument."
       },
       {
+      {
         "name": "photo_ids",
         "optional": "0",
         "_content": "A comma-delimited list of photo ids to include in the gallery. They will appear in the set in the order sent. This list must contain the primary photo id. This list of photos replaces the existing list."
@@ -39,7 +40,7 @@
         "message": "SSL is required",
         "_content": "SSL is required to access the Flickr API."
       },
-      {
+        {
         "code": 96,
         "message": "Invalid signature",
         "_content": "The passed signature was invalid."
@@ -47,6 +48,7 @@
       {
         "code": 97,
         "message": "Missing signature",
+        "_content": "The call required signing but no signature was sent."
         "_content": "The call required signing but no signature was sent."
       },
       {
@@ -58,7 +60,7 @@
         "code": 99,
         "message": "User not logged in / Insufficient permissions",
         "_content": "The method requires user authentication but the user was not logged in, or the authenticated method call did not have the required permissions."
-      },
+	},
       {
         "code": 100,
         "message": "Invalid API Key",
@@ -93,13 +95,13 @@
         "code": 115,
         "message": "Invalid XML-RPC Method Call",
         "_content": "The XML-RPC request document could not be parsed."
-      },
+		},
       {
         "code": 116,
         "message": "Bad URL found",
-        "_content": "One or more arguments contained a URL that has been used for abuse on Flickr."
+"_content": "One or more arguments contained a URL that has been used for abuse on Flickr."
       }
-    ]
+               ]
   },
   "stat": "ok"
 }
