@@ -9,7 +9,14 @@
     $(function() {
     	$('.swipebox').swipebox();    
 
-    	console.log($.url().param('city'));
+    	var queryParams = $.getQueryParameters();
+    	var currenLink = $('.nav li a');
+
+    	console.log(currenLink);
+
+    	if (currenLink.attr('id') == queryParams) {
+    		$('#' + currenLink).addClass("active");
+    	}
 
 	});
 
@@ -35,12 +42,12 @@
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
 				
-				<li><a class="menu" href="/?city=London">London</a></li>
-				<li><a class="menu" href="/?city=Los+Angeles">Los Angeles</a></li>
-				<li><a class="menu" href="/?city=New+York">New York</a></li>
-				<li><a class="menu" href="/">Montreal</a></li>
-				<li><a class="menu" href="/?city=Moscow">Moscow</a></li>
-				<li><a class="menu" href="/?city=Toronto">Toronto</a></li>
+				<li><a class="menu" id="London" href="/?city=London">London</a></li>
+				<li><a class="menu" id="Los+Angeles" href="/?city=Los+Angeles">Los Angeles</a></li>
+				<li><a class="menu" id="New+York" href="/?city=New+York">New York</a></li>
+				<li><a class="menu" id="Montreal" href="/">Montreal</a></li>
+				<li><a class="menu" id="Moscow" href="/?city=Moscow">Moscow</a></li>
+				<li><a class="menu" id="Toronto" href="/?city=Toronto">Toronto</a></li>
 				
 			</ul>			
 		</div><!--/.nav-collapse -->
