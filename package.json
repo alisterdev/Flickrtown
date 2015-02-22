@@ -19,6 +19,9 @@
   "bugs": {
     "url": "https://github.com/antonshevchenko/codewithme/issues"
   },
+  "engines": {
+    "node": "0.10.x"
+  },
   "homepage": "https://github.com/antonshevchenko/codewithme",
   "dependencies": {
     "body-parser": "^1.10.0",
