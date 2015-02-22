@@ -15,12 +15,25 @@ router.get('/project/:slug', function(req, res){
 
 // Index
 router.get('/', function(req, res) {
+  
   var query = "montreal";
   if (req.query.city) {
     query = req.query.city;
   }
 
-  console.log(query);
+  var groupId = '34427471721@N01'; // MTL real city
+
+  if (query == "New York") {
+    groupId = '360904@N23';
+  } else if (query == "Los Angeles") {
+    groupId = '35034362087@N01';
+  } else if (query == "Toronto") {
+    groupId = '35034362597@N01';
+  } else if (query == "London") {
+    groupId = '85042296@N00';
+  } else if (query == "Moscow") {
+    groupId = '22761195@N00';
+  }
 
   var Flickr = require("flickrapi"),
   flickrOptions = {
@@ -29,16 +42,9 @@ router.get('/', function(req, res) {
   };
 
   Flickr.tokenOnly(flickrOptions, function(error, flickr) {
-    // we can now use "flickr" as our API object,
-    // but we can only call public methods and access public data
-    flickr.groups.search({
-      text: query
-    }, function(err, result) {
-      var randomGroup = Math.floor((Math.random() * result.groups.group.length));
-      var groupID = result.groups.group[randomGroup].nsid;
-      console.log(groupID);
-      flickr.groups.pools.getPhotos({
-        group_id: groupID
+
+    flickr.groups.pools.getPhotos({
+        group_id: groupId
       }, function (err, result){
         var obj = result.photos.photo;
         var imgArray = [];
@@ -56,14 +62,31 @@ router.get('/', function(req, res) {
 
           imgArray[i] = {title: obj[i].title, imgSm: imgSm, imgLg:imgLg};
         }
-
+        shuffle(imgArray);
         res.render('index', {data: imgArray}); 
 
       }); // end of groups.pools.getPhotos
-
-    }); // end of group.search
   });
 });
 
 module.exports = router;
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex ;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
 

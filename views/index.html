@@ -25,11 +25,14 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li><a class="menu" href="/?city=New+York">New York</a></li>
+				
 				<li><a class="menu" href="/?city=London">London</a></li>
-				<li><a class="menu" href="/">Montreal</a></li>
-				<li><a class="menu" href="/?city=Toronto">Toronto</a></li>
 				<li><a class="menu" href="/?city=Los+Angeles">Los Angeles</a></li>
+				<li><a class="menu" href="/?city=New+York">New York</a></li>
+				<li><a class="menu" href="/">Montreal</a></li>
+				<li><a class="menu" href="/?city=Moscow">Moscow</a></li>
+				<li><a class="menu" href="/?city=Toronto">Toronto</a></li>
+				
 			</ul>			
 		</div><!--/.nav-collapse -->
 	</div>
@@ -47,28 +50,9 @@
 	}
 
 	for (var i = 0; i < numOfPics; i++) { %>
-	<a rel="gallery-2" href="<%=data[i].imgLg %>" class="swipebox">
+	<a rel="gallery-2" href="<%=data[i].imgLg %>" class="swipebox" title="<%=data[i].title %>">
 		<div class="img-holder"  style="background-image: url('<%=data[i].imgSm %>');">
-<<<<<<< HEAD
-			<!-- <div class="dark-filter">
-				<div class="caption-wrapper">
-					<div class="caption">
-						<div class="caption-title">
-							<%=data[i].title%>
-						</div>
-					</div>
-				</div>
-			</div> -->
-=======
 			<div class="dark-filter"></div>
-			<div class="caption-wrapper">
-			<div class="caption">
-				<div class="caption-title">
-					<%=data[i].title %>
-				</div>
-			</div>
-		</div>
->>>>>>> 99eb2e6e386cbc50e2b1b6e28ea10aaaa0de303c
 		</div>
 		<img src="<%=data[i].imgLg %>" alt="image" style="display: none;">
 	</a>
