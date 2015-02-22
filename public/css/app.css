@@ -4891,7 +4891,7 @@ button.close {
   heigth: 100%; }
 
 body {
-  background: #ccc; }
+  background: #eee; }
 
 .navbar-header {
   display: none; }
@@ -4914,7 +4914,8 @@ body {
   margin: 20px;
   background-position: center;
   background-repeat: no-repeat;
-  float: left; }
+  float: left;
+  border: 3px solid #fff; }
 
 .page-content {
   margin-top: 100px; }
