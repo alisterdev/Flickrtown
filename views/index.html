@@ -7,7 +7,16 @@
     <script type="text/javascript" src="http://cdn.logograph.com/lib/swipebox/js/jquery.swipebox.min.js"></script>
     <script type="text/javascript">
     $(function() {
-    	$('.swipebox').swipebox();
+    	$('.swipebox').swipebox();    
+
+    	console.log($.url().param('city'));
+
+	});
+
+	jQuery.extend({
+	  getQueryParameters : function(str) {
+		  return (str || document.location.search).replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];
+	  }
 	});
 	</script>
 </head>
