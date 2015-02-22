@@ -1,7 +1,6 @@
 var express = require('express');
 var morgan = require('morgan');
 var consolidate = require('consolidate');
-var config = require('konfig')();
 var errorHandler = require('./utils').errorHandler;
 var generateSlug = require('./utils').generateSlug;
 var bodyParser = require('body-parser');
@@ -78,7 +77,8 @@ function done() {
 	});
 
 	//start
-	var server = app.listen(config.app.port, function(){
+	app.set('port', (process.env.PORT || 3000));
+	var server = app.listen(app.get('port'), function(){
 			console.log('Listening at http://%s:%s',
 				server.address().address,
 				server.address().port);
