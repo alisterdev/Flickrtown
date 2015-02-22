@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "preinstall": "npm install -g nodemon gulp",
-    "start": "mkdir -p ./data/db | mongod --dbpath ./data/db | nodemon server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",

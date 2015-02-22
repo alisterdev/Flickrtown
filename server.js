@@ -13,10 +13,6 @@ var routes = require('./routes');
 var app = express();
 app.set('env', 'dev');
 
-//- DATABASE
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/codewithme');
-
 //- PRE-ROUTES
 app.use(morgan('dev'));
 
