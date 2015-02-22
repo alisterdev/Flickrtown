@@ -1,0 +1,38 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/Users/Alister/Documents/Workspace/Projects/codewithme',
+5 verbose install   [ 'body-parser',
+5 verbose install     'consolidate',
+5 verbose install     'ejs',
+5 verbose install     'express',
+5 verbose install     'konfig',
+5 verbose install     'mongoose',
+5 verbose install     'morgan',
+5 verbose install     'bootstrap-sass',
+5 verbose install     'gulp',
+5 verbose install     'gulp-sass',
+5 verbose install     'gulp-minify-css',
+5 verbose install     'gulp-rename' ] ]
+6 info preinstall codewithme@0.0.1
+7 verbose unsafe-perm in lifecycle true
+8 info codewithme@0.0.1 Failed to exec preinstall script
+9 error codewithme@0.0.1 preinstall: `npm install -g nodemon gulp`
+9 error Exit status 3
+10 error Failed at the codewithme@0.0.1 preinstall script.
+10 error This is most likely a problem with the codewithme package,
+10 error not with npm itself.
+10 error Tell the author that this fails on your system:
+10 error     npm install -g nodemon gulp
+10 error You can get their info via:
+10 error     npm owner ls codewithme
+10 error There is likely additional logging output above.
+11 error System Darwin 14.1.0
+12 error command "node" "/usr/local/bin/npm" "install"
+13 error cwd /Users/Alister/Documents/Workspace/Projects/codewithme
+14 error node -v v0.10.35
+15 error npm -v 1.4.28
+16 error code ELIFECYCLE
+17 verbose exit [ 1, true ]
