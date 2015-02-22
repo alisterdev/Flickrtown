@@ -4,14 +4,47 @@
     <link rel="stylesheet" type="text/css" href="/css/app.min.css">
 </head>
 <body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">      		
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand menu" href="#home">FlickrTown.</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li><a class="menu" href="#">New York</a></li>
+				<li><a class="menu" href="#home">London</a></li>
+				<li><a class="menu" href="">Montreal</a></li>
+				<li><a class="menu" href="">Toronto</a></li>
+				<li><a class="menu" href="">Los Angeles</a></li>
+			</ul>			
+		</div><!--/.nav-collapse -->
+	</div>
+</div>
 
 <% var i = data.photo.id;
 
 
 %>
 
+<p><%=i  %></p>
 
-<p><%= i  %></p>
+<div class="container">
+<div class="row">
+<% for (var i = 0; i < 12; i++) { %>
+	<div class="col-md-3">
+		<div class="img-holder"  style="padding: 5px;">
+			<img src="http://placehold.it/300/ffffff/">
+		</div>
+	</div>
+<% } %>
+</div>
+
 
 </body>
 </html>
