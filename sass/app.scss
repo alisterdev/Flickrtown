@@ -77,3 +77,28 @@ body {
 	margin: 0 auto;
 	width: 1020px;
 }
+
+.caption-border {
+	z-index: 100;
+	overflow: hidden;
+	opacity: 1;
+	margin: 0px;
+	max-height: 100%;
+	bottom: 5%;
+	left: 0px;
+	position: absolute;
+}
+
+.caption {
+	margin: 0px;
+	padding: 0px 7px;
+	background: none repeat scroll 0% 0% #000;
+}
+
+.caption-title {
+	padding: 5px 0px !important;
+	overflow: hidden;
+	color: #FFF !important;
+	font-size: 14px;
+	text-align: left !important;
+}

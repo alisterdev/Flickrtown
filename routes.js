@@ -17,7 +17,7 @@ router.get('/project/:slug', function(req, res){
 router.get('/', function(req, res) {
 
   var query = "montreal skyline";
-
+  console.log(req.query.city);
   if (req.query.city) {
     query = req.query.city + " skyline";
   }
