@@ -15,9 +15,7 @@ router.get('/project/:slug', function(req, res){
 
 // Index
 router.get('/', function(req, res) {
-
   var query = "montreal";
-
   if (req.query.city) {
     query = req.query.city;
   }

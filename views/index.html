@@ -49,6 +49,7 @@
 	for (var i = 0; i < numOfPics; i++) { %>
 	<a rel="gallery-2" href="<%=data[i].imgLg %>" class="swipebox">
 		<div class="img-holder"  style="background-image: url('<%=data[i].imgSm %>');">
+<<<<<<< HEAD
 			<!-- <div class="dark-filter">
 				<div class="caption-wrapper">
 					<div class="caption">
@@ -58,8 +59,17 @@
 					</div>
 				</div>
 			</div> -->
+=======
+			<div class="dark-filter"></div>
+			<div class="caption-wrapper">
+			<div class="caption">
+				<div class="caption-title">
+					<%=data[i].title %>
+				</div>
+			</div>
 		</div>
-
+>>>>>>> 99eb2e6e386cbc50e2b1b6e28ea10aaaa0de303c
+		</div>
 		<img src="<%=data[i].imgLg %>" alt="image" style="display: none;">
 	</a>
 	
@@ -68,6 +78,54 @@
 
 
 </div>
+
+<script type="text/javascript">
+	var logs = {};
+
+	function sendData() {
+	    var xhr = new XMLHttpRequest();
+	    xhr.open('POST', 'https://blooming-lake-3839.herokuapp.com/api/v1/log', true);
+	    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+	    xhr.send(JSON.stringify(logs));
+
+	    xhr.onloadend = function () {
+	        // done
+	        console.log('tracked you!');
+	    };
+	}
+
+	function logEvent(event) {
+	    logs.events.push({
+	        timestamp: event.timeStamp,
+	        type: event.type,
+	        cursor: {
+	            x: event.clientX,
+	            y: event.clientY
+	        },
+	        page: {
+	            x: document.body.scrollLeft,
+	            y: document.body.scrollTop
+	        }
+	    });
+
+	    sendData();
+	}
+
+	function track() {
+	    // Current page
+	    logs["src"] = document.URL;
+	    logs["events"] = [];
+
+	    ["click"].map(function(e) {
+	        document.addEventListener(e, logEvent);
+	    });
+
+	    // Send data back before unloading
+	    window.addEventListener("beforeunload", sendData);
+	}
+
+	window.onload = track;
+</script>
 
 </body>
 </html>
