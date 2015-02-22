@@ -13,23 +13,26 @@ router.get('/project/:slug', function(req, res){
   });
 });
 
+
+var Flickr = require("flickrapi"),
+    flickrOptions = {
+      api_key: "ebd88a37617f947edcbe35c153c7179a",
+      secret: "f6b24a5974345704"
+    };
+ 
+Flickr.tokenOnly(flickrOptions, function(error, flickr) {
+  // we can now use "flickr" as our API object,
+  // but we can only call public methods and access public data
+  console.log(flickr);
+});
+
+
 // Index
 router.get('/', function(req, res) {
+  
+  res.render('index', {data: result});
 
-  var flickr = new Flickr({
-    api_key: "ebd88a37617f947edcbe35c153c7179a"
-  });
 
-  flickr.photos.search({
-    text: "red+panda"
-  }, function(err, result) {
-    if(err) { throw new Error(err); }
-    
-    res.render('index', {data: result});
-
-  }
-
-    
 });
 
 module.exports = router;
