@@ -1,7 +1,7 @@
-Flickrtown
+#Flickrtown
 ============
-Bringing Flickr to your town
+##Beatiful images of cities around the world right from Flickr database
 
-Check-check-check it out [here.me](http://immense-anchorage-4949.herokuapp.com/)
+Check-check-check it out [here](http://immense-anchorage-4949.herokuapp.com/)
 
 `#yolo`
