@@ -62,8 +62,8 @@ router.get('/', function(req, res) {
 
           imgArray[i] = {title: obj[i].title, imgSm: imgSm, imgLg:imgLg};
         }
-        shuffle(imgArray);
-        res.render('index', {data: imgArray}); 
+        shuffle(imgArray);        
+        res.render('index', {data: imgArray, city: req.query.city}); 
 
       }); // end of groups.pools.getPhotos
   });
